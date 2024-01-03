@@ -44,3 +44,12 @@ puts var1  # Outputs: "Goodbye, World!"
 puts var2  # Outputs: "HELLO, WORLD!
 
 puts MyClass.inspect
+
+###################
+# CONSTANTS #
+MAX_SPEED = 100 # constant
+
+# not meant to be changed
+# but can be changed
+# warning will be thrown
+# only first letter makes it a constant
