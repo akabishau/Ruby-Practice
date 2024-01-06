@@ -25,3 +25,7 @@ Style/SymbolArray:
 
 Style/ClassAndModuleChildren:
   Enabled: false
+
+Style/WordArray:
+  EnforcedStyle: brackets
+  MinSize: 5
