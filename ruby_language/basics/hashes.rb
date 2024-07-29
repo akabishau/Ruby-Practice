@@ -7,8 +7,6 @@ person = {
 
 # Access values in the hash
 puts person[:name] # Output: John
-puts person[:age] # Output: 30
-puts person[:city] # Output: New York
 
 # Add a new key-value pair to the hash
 person[:occupation] = "Software Engineer"
