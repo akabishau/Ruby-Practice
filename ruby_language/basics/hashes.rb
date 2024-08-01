@@ -1,15 +1,18 @@
-# Create a hash
+# UNORDERED
+# OBJECT-INDEXED
+# COLLECTION OF KEY-VALUE PAIRS
+
 person = {
   name: "John",
   age: 30,
   city: "New York"
 }
 
-# Access values in the hash
-puts person[:name] # Output: John
+person[:name] # access value: John
 
 # Add a new key-value pair to the hash
 person[:occupation] = "Software Engineer"
+# { name: "John", age: 30, city: "New York", occupation: "Software Engineer" }
 
 # Update the value of a key in the hash
 person[:age] = 31

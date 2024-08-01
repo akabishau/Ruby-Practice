@@ -1,37 +1,34 @@
-# Creating a string
-name = "John Doe"
+first_name = "John" # Creating a string
+last_name = "Doe"
 
 # Concatenating strings
-greeting = "Hello, #{name}" << "!"
+name = first_name + " " + last_name # "John Doe"
+greeting = "Hello, #{name}" << "!" # "Hello, John Doe!"
 
 # Interpolating variables in a string
 age = 30
-message = "I am #{age} years old."
+"I am #{age} years old." # "I am 30 years old."
+
+# multiplication of strings
+"Yada " * 3 # "Yada Yada Yada "
 
 # Checking if a string contains a substring
-contains_doe = name.include?("Doe")
+contains_doe = name.include?("Doe") # true
 
-# Splitting a string into an array
-words = name.split # (" ") is default
-
-# Reversing a string
-reversed_name = name.reverse
-
-# Converting a string to uppercase
-uppercase_name = name.upcase
-
-# Converting a string to lowercase
-lowercase_name = name.downcase
-
-# Finding the length of a string
-name_length = name.length
+name.split # array ["John", "Doe"] - (" ") is default
+name.reverse # "eoD nhoJ"
+name.upcase # "JOHN DOE"
+name.downcase # "john doe"
+name.capitalize # "John doe"
+name.length # 8
 
 # Accessing characters in a string
-first_initial = name[0]
-last_initial = name[-1]
+name[0] # "J"
+name[-1] # "e" (-1 last character)
 
 # Escaping characters in a string
-escaped_string = "This is a \"quoted\" string."
+"This is a \"quoted\" string." # This is a "quoted" string. - use \ to escape
+"Let's escape a single quote." # Let's escape a single quote.
 
 # works only with double quotes
 # \t - tab
@@ -39,15 +36,8 @@ escaped_string = "This is a \"quoted\" string."
 # \r - carriage return
 # \s - space
 
-# Printing the results
-puts greeting
-puts message
-puts contains_doe
-puts words
-puts reversed_name
-puts uppercase_name
-puts lowercase_name
-puts name_length
-puts first_initial
-puts last_initial
-puts escaped_string
+"1 + 1 = #{1 + 1}" # "1 + 1 = 2" - interpolation works with expressions
+
+
+1.to_s # => "1"
+"1".to_i # => 1

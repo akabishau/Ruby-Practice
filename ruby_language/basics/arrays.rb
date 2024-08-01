@@ -12,7 +12,7 @@ array[0] # 1
 array[3] = "four" # [1, "two", :three, "four", 5.0, 5, 5, 1]
 array << "last" # [1, "two", :three, "four", 5.0, 5, 5, 1, "last"]
 array << [6, 7] # [1, "two", :three, "four", 5.0, 5, 5, 1, "last", [6, 7]]
-array[-1] # [6, 7]
+array[-1] # [6, 7] - last element (embedded array in this case)
 array[2, 3] # - 3 elements starting from index 2 => [:three, "four", 5.0]
 array[-2, 2] # - 2 elements starting from index -2 => ["last", [6, 7]]
 array[0..1] # - elements from index 0 to index 1 => [1, "two"]
@@ -26,9 +26,8 @@ my_array.count(4) # 2
 my_array.empty? # false
 
 # does not modify the original array
-my_array.reverse # ["c", 4, nil, [9, 10], 4, 2]
-# assigns the reversed array to the variable
-reversed = my_array.reverse # ["c", 4, nil, [9, 10], 4, 2]
+my_array.reverse # returns ["c", 4, nil, [9, 10], 4, 2]
+
 # modifies the original array - WORKS WITH OTHER METHODS
 my_array.reverse! # ["c", 4, nil, [9, 10], 4, 2]
 # ! - bang
@@ -39,7 +38,7 @@ my_array.flatten! # perm flattens any nested arrays into one array
 
 my_array.include?(4) # true
 my_array.delete_at(0) # return and deletes element and shifts the rest of the elements
-my_array.delete(4) # deletes all instances of 4
+my_array.delete("c") # deletes all instances of "c"
 
 # array methods - stack behavior
 # push - add to the end or <<
