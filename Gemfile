@@ -1,4 +1,4 @@
 source "https://rubygems.org"
 
 gem "rubocop"
-gem "solargraph"
+gem "rubocop-shopify"
