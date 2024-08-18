@@ -27,7 +27,8 @@ MyClass.class_var # => "Class variable"
 # Global variable - $ (avoid using)
 $my_global_variable = "Hello, World!"
 
-###################
+######## IMPORTANT ###########
+
 # vars not objects but references to objects
 # "pass-by-reference" for objects example
 var1 = "Hello, World!"
