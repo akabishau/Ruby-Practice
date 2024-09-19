@@ -1,0 +1,18 @@
+Key Concepts Highlighted
+
+	1.	Defining Modules with Constants and Methods: Modules can contain constants and methods. Module methods (defined with self.) can be called directly on the module.
+	2.	Including Modules (Mixins): Use include to mix a module’s instance methods into a class, allowing instances of the class to use those methods.
+	3.	Extending Objects with Modules: Use extend to add module methods as singleton methods to a specific object instance.
+	4.	Namespacing: Modules can encapsulate classes, methods, and constants to prevent naming collisions and organize code logically.
+	5.	Module Hooks (included, extended): Modules can execute code when they’re included or extended in a class, often used to add class methods or perform setup tasks.
+	6.	Prepending Modules: Use prepend to insert a module into the inheritance chain before the class, allowing module methods to override class methods.
+	7.	Including vs. Extending: include adds module methods as instance methods; extend adds module methods as singleton methods to an object.
+	8.	Module Functions (module_function): Define methods that are accessible both as module functions and private instance methods when included.
+	9.	Constants in Modules: Modules can define constants that are accessible using the ModuleName::CONSTANT syntax.
+	10.	Mixins for Multiple Classes: Modules allow sharing of methods across multiple unrelated classes.
+	11.	Understanding self in Modules: Inside a module (at the top level), self refers to the module itself.
+	12.	Aliasing Methods: Use alias_method to create an alias for a method within a module.
+	13.	Overriding Methods with Modules: Modules can override methods in the class they are included in, especially when using prepend.
+	14.	Enumerable Module: By including Enumerable and defining an each method, a class gains a suite of traversal and searching methods.
+	15.	Method Lookup Chain: Using prepend, include, and inheritance affects the method lookup order, which can be inspected with Class.ancestors.
+	16.	Modules Adding Class Methods: Modules can add class methods to a class when included, using the base.extend pattern in the included hook.
