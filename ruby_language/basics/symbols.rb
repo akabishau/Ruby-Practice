@@ -2,14 +2,16 @@
 # lowercase, underscore, no spaces
 # can't use integers as symbols
 
- # Old way
- # => hash rocket
+# this version creates a hash with strings as keys
+very_old_person = { "name" => "John", "age" => 30 }
+# this version creates a hash with strings as keys
 old_person = { :name => "Jonh", :age => 30 }
-
-
-# Creating a hash with symbols as keys
+# this version creates a hash with symbols as keys
 person = { name: "John", age: 30, city: "New York" } # current "json" like way
+
+# usage
 person[:name] # Output: "John"
+person["name"] # Output: nil - can't access with string
 person.keys.first.class # Symbol
 
 # RAILS not RUBY feature: interchangeble with strings

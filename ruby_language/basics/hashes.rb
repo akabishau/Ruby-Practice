@@ -1,6 +1,17 @@
 # UNORDERED
-# OBJECT-INDEXED
+# OBJECT-INDEXED, no position to access items
 # COLLECTION OF KEY-VALUE PAIRS
+# VALUES CAN BE ANY OBJECT
+# KEYS MUST BE UNIQUE
+
+# old syntax - hash rocket, like key pointing to value
+car = {
+  "brand" => "Toyota",
+  "model" => "Corolla",
+  "year" => 2020,
+}
+car["brand"] # access value: Toyota
+
 
 person = {
   name: "John",
@@ -34,4 +45,6 @@ person.values_at(:name, :age) # ["John", 31]
 person.length # 3
 
 person.store(:hobby, "Fishing") # adds a new key-value pair
-person.merge!({ hobby: "Fishing", city: "New York" }) # adds a new key-value pair and updates the value of an existing key
+
+# adds a new key-value pair and updates the value of an existing key
+person.merge!({ hobby: "Fishing", city: "New York" })

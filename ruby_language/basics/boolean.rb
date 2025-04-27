@@ -5,7 +5,7 @@
 # >, <, >=, <=
 # <=> - Combined Comparison Operator
 
-true.class # => TrueClass - why?
+true.class # => TrueClass - separate objects in Ruby
 
 # method? - method that returns true or false
 

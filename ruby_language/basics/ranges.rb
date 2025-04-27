@@ -16,3 +16,5 @@ letters = "a".."c" # "a", "b", "c"
 letters.include?("b") # true
 letters.to_a # ["a", "b", "c"]
 [*letters] # ["a", "b", "c"]
+
+(1..5).class # Range
