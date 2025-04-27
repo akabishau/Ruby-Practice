@@ -5,11 +5,12 @@
 # can combine different types of objects
 # can have duplicates
 # can be nested arrays
-# can have nil objects
+# can have nil objects - !!!
 
 array = [1, "two", :three, nil, 5.0, 5, 5, 1]
 array[0] # 1
-array[3] = "four" # [1, "two", :three, "four", 5.0, 5, 5, 1]
+array[100] # nil - out of bounds
+array[3] = "four" # [1, "two", :three, "four", 5.0, 5, 5, 1] - replaces nil with "four"
 array << "last" # [1, "two", :three, "four", 5.0, 5, 5, 1, "last"]
 array << [6, 7] # [1, "two", :three, "four", 5.0, 5, 5, 1, "last", [6, 7]]
 array[-1] # [6, 7] - last element (embedded array in this case)
@@ -40,7 +41,7 @@ my_array.include?(4) # true
 my_array.delete_at(0) # return and deletes element and shifts the rest of the elements
 my_array.delete("c") # deletes all instances of "c"
 
-# array methods - stack behavior
+# STACK BEHAVIOR
 # push - add to the end or <<
 # pop - remove from the end and return it
 # shift - remove from the beginning and return it
@@ -48,7 +49,7 @@ my_array.delete("c") # deletes all instances of "c"
 
 # array math operations
 combined_array = [1, 2, 3] + [4, 5] # [1, 2, 3, 4, 5]
-remove_twos_array = [1, 2, 3, 2] - [2] # [1, 3] - removes ALL instances of 2
+remove_twos_array = [1, 2, 3, 2] - [2] # [1, 3] - removes ALL instances of 2 !!! crazy!!!
 
 # array iteration methods
 arr = [1, 2, 3]
@@ -57,6 +58,20 @@ arr.select { |num| num > 1 } # [2, 3] - block returns true
 arr.reject { |num| num > 1 } # [1] - block returns false
 arr.uniq! # [1, 2, 3] - perm (!) removes duplicates
 arr.join(", ") # "1, 2, 3" - returns a string
+"123".split(", ") # ["1", "2", "3"] - returns an array
 arr.join # "123" - returns a string - () can be omitted
 arr.sort # temp sorts the array
 arr.slice(1, 2) # [2, 3] - returns a new array - (index, length)
+
+
+# .all?
+# Iterates through each element in an array
+# Evaluates the block for each element
+# Returns true only if the block returns true for every element
+# Returns false as soon as it encounters an element for which the block returns false
+if data.is_a?(Array) && data.all? { |item| item.is_a?(Hash) && item.key?("type") }
+  return data
+else
+  Rails.logger.error "Unexpected response format from API: #{data.inspect}"
+  nil
+end
