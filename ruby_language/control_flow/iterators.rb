@@ -1,7 +1,6 @@
 # iterator is method that repeatedly invokes a block of code
 
 # INTEGER METHODS
-
 5.times { puts "Hello" }
 5.times { |i| puts "Hello #{i}" }
 5.times do |i|
@@ -13,15 +12,14 @@ end
 (1..5).each { |i| puts i } # 1 2 3 4 5
 1.step(10, 2) { |i| puts i } # 1 3 5 7 9
 
-# STRING METHODS
 
+# STRING METHODS
 "Hello".each_char { |c| puts c } # H e l l o
 "Hello\nWorld".each_line { |l| puts l } # Hello World
 "Hello".each_byte { |b| puts b } # 72 101 108 108 111
 "Hello".each_codepoint { |c| puts c } # 72 101 108 108 111
 
 # ARRAY METHODS
-
 fruits = ["apple", "banana", "orange"]
 
 # for fruit in fruits do ... end # not common?

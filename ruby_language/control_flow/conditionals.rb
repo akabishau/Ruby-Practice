@@ -17,12 +17,17 @@ puts "a != 10" unless x == 10 # negation of if statement !true
 cart = ["shoes", "watch", "computer"]
 puts "The first item is #{cart[0]}" unless cart.empty?
 
+unless cart.empty?
+  puts "The first item is #{cart[0]}"
+end
+
 # if product.visible? ... end # positive
 # unless product.hidden? ... end # negative
 # if product.in_stock? ... end # positive
 # unless product.sold_out? ... end # negative but the same as positive above
 
 # can use UNLESS-ELSE-END statement but not common
+
 
 # CONDITIONALS: CASE statement: CASE-WHEN-WHEN-END
 

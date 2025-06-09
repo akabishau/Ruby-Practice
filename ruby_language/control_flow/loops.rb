@@ -30,3 +30,8 @@ loop do
   i += 1
   break if i > 3
 end
+
+# break - stop the loop
+# next - jump to the next iteration
+# redo - restart the current iteration
+# retry - start the whole loop over
